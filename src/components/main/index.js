@@ -8,6 +8,12 @@ import Courses from '../courses'
 import Pages from '../pages'
 import SignIn from '../signin'
 import SignUp from '../signup'
+import BuddyPress from '../Buddypress'
+import Shop from '../Shop'
+import Portfolio from '../Portfolio'
+import Blog from '../Blog'
+import BbPress from '../bbPress'
+
 
 import './main.scss'
 
@@ -21,6 +27,16 @@ function Main() {
                 <Route path='/pages' component = {Pages}/>
                 <Route path='/signin' component = {SignIn}/>
                 <Route path='/signup' component = {SignUp}/>
+                <Route path='/BuddyPress' component = {BuddyPress}/>
+                <Route path='/Shop' component = {Shop}/>
+                <Route path='/Portfolio' component = {Portfolio}/>
+                <Route path='/Blog' component = {Blog}/>
+                <Route path='/bbpress' component = {BbPress}/>
+
+
+
+                
+
                 <Route>
                     <div>
                         404 man
