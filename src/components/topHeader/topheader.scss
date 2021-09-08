@@ -1,0 +1,81 @@
+.topHeader{
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+    max-width: 75%;
+    .left{
+        .first_nav{
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            font-weight: 400;
+            font-size: large;
+            border-right: 0.3px solid rgb(170, 189, 209);
+        }
+        .first_nav:first-child{
+            border-left: 0.14px solid rgb(170, 189, 209);
+        }
+
+    }
+    .right{
+        display: flex;
+        flex-direction: row;
+        a{
+        padding: 10px 20px;
+        border-right: 0.3px solid rgb(170, 189, 209);
+        }
+        a:first-child{
+            border-left: 0.14px solid rgb(170, 189, 209);
+        }
+    }
+
+}
+@media only screen and (max-width: 820px) {
+    .topHeader{
+        display: block;
+        // margin: auto;
+        // justify-content: space-between;
+        // align-items: center;
+        // height: 55px;
+        // width: 75%;
+        .left{
+            display: block;
+            margin-bottom: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            .first_nav{
+                color: white;
+                text-decoration: none;
+                // padding: 15px;
+                font-weight: 400;
+                font-size: large;
+                border-right: 0.3px solid rgb(170, 189, 209);
+            }
+            .first_nav:first-child{
+                border-left: 0.14px solid rgb(170, 189, 209);
+            }
+    
+        }
+        .right{
+            display: block;
+            margin-bottom: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            a{
+            // padding: 10px 20px;
+            border-right: 0.3px solid rgb(170, 189, 209);
+            }
+            a:first-child{
+                border-left: 0.14px solid rgb(170, 189, 209);
+            }
+        }
+    
+    }
+  }
+  @media only screen and (max-width: 520px) {
+    .topHeader{
+        display: none;
+    }
+  }
