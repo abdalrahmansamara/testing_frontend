@@ -5,6 +5,8 @@ import './adminstable.scss'
 import {If, Else, Then} from 'react-if'
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router';
+import toast from 'react-hot-toast';
+
 
 
 function AdminsTable(props) {
@@ -14,13 +16,19 @@ function AdminsTable(props) {
 
 
   const handleDelete = async (e) => {
-    e.preventDefault()
-    let token = cookie.load('auth');
-    let id = e.target.courseid.value
-    const config = { headers: { Authorization: "Bearer " + token } };
-    let deleteLink = `https://talkversity-apitesting.herokuapp.com/api/v1/courses/${id.toString()}`
-    await axios.delete(deleteLink, config)
-    props.getdata()
+    try {
+      e.preventDefault()
+      let token = cookie.load('auth');
+      let id = e.target.courseid.value
+      const config = { headers: { Authorization: "Bearer " + token } };
+      let deleteLink = `https://talkversity-apitesting.herokuapp.com/api/v1/courses/${id.toString()}`
+      await axios.delete(deleteLink, config)
+      toast.success('Deleted Successfully')
+      props.getdata()
+      
+    } catch (error) {
+      toast.error(`Could not delete`)
+    }
   }
 
   const sendToDetailsPage = (e) => {

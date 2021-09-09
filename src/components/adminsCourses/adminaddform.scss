@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+.formcss {
+  width:100vh;
+  display: block;
+  margin: auto;
+  
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+.back{
+  background-color: rgb(253, 251, 247);
+
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.5;
+  background-color: #f1f3fb;
+  padding: 0 2rem;
+  
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 0;
+}
+
+.card {
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 900px;
+  background-color: #FFF;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px 0 rgba(153, 153, 153, 0.25);
+  padding: 0.75rem;
+}
+
+.card-image {
+  border-radius: 8px;
+  overflow: hidden;
+  padding-bottom: 65%;
+  background-image: url("https://wallpaperaccess.com/full/1510143.jpg");
+  background-repeat: no-repeat;
+  background-size: 150%;
+  background-position: 0 5%;
+  position: relative;
+}
+
+.card-heading {
+  position: absolute;
+  left: 10%;
+  top: 15%;
+  right: 10%;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #735400;
+  line-height: 1.222;
+}
+.card-heading small {
+  display: block;
+  font-size: 0.75em;
+  font-weight: 400;
+  margin-top: 0.25em;
+}
+
+.card-form {
+  padding: 2rem 1rem 0;
+}
+
+.input {
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  padding-top: 1.5rem;
+}
+.input + .input {
+  margin-top: 1.5rem;
+}
+
+.input-label {
+  color: #8597a3;
+  position: absolute;
+  top: 1.5rem;
+  transition: 0.25s ease;
+}
+
+.input-field {
+  border: 0;
+  z-index: 1;
+  background-color: transparent;
+  border-bottom: 2px solid #eee;
+  font: inherit;
+  font-size: 1.125rem;
+  padding: 0.25rem 0;
+}
+.input-field:focus, .input-field:valid {
+  outline: 0;
+  border-bottom-color: #6658d3;
+}
+.input-field:focus + .input-label, .input-field:valid + .input-label {
+  color: #6658d3;
+  transform: translateY(-1.5rem);
+}
+
+.action {
+  margin-top: 2rem;
+}
+
+.action-button {
+  font: inherit;
+  font-size: 1.25rem;
+  padding: 1em;
+  width: 100%;
+  font-weight: 500;
+  background-color: #6658d3;
+  border-radius: 6px;
+  color: #FFF;
+  border: 0;
+}
+.action-button:focus {
+  outline: 0;
+}
+
+.card-info {
+  padding: 1rem 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #8597a3;
+}
+.card-info a {
+  display: block;
+  color: #6658d3;
+  text-decoration: none;
+}
+.m-auto{
+  margin: auto;
+}
+.justify-center{
+  justify-content: center;
+}
+.items-center{
+  align-items: center;
+}
+.flex{
+  display: flex;
+}
+.text-gray-700{
+  --tw-text-opacity: 1;
+  color: rgba(55, 65, 81, var(--tw-text-opacity));
+}
+.font-bold{
+  font-weight: 700;
+}
+.lastest{
+  width: 2rem;
+  height: 2rem;
+  --tw-text-opacity: 1;
+  color: rgba(79, 70, 229, var(--tw-text-opacity));	
+  --tw-border-opacity: 1;
+  border-color: rgba(79, 70, 229, var(--tw-border-opacity));
+}
+
+.styled-checkbox {
+  position: absolute; // take it out of document flow
+  opacity: 0; // hide it
+
+  & + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  // Box.
+  & + label:before {
+    content: '';
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 20px;
+    height: 20px;
+    background: white;
+  }
+
+  // Box hover
+  &:hover + label:before {
+    background: #f35429;
+  }
+  
+  // Box focus
+  &:focus + label:before {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+  }
+
+  // Box checked
+  &:checked + label:before {
+    background: #f35429;
+  }
+  
+  // Disabled state label.
+  &:disabled + label {
+    color: #b8b8b8;
+    cursor: auto;
+  }
+
+  // Disabled box.
+  &:disabled + label:before {
+    box-shadow: none;
+    background: #ddd;
+  }
+
+  // Checkmark. Could be replaced with an image
+  &:checked + label:after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 9px;
+    background: white;
+    width: 2px;
+    height: 2px;
+    box-shadow: 
+      2px 0 0 white,
+      4px 0 0 white,
+      4px -2px 0 white,
+      4px -4px 0 white,
+      4px -6px 0 white,
+      4px -8px 0 white;
+    transform: rotate(45deg);
+  }
+}
+
+// Demo-only styles
+// --------------
+
+html {
+  background: lightgray;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.unstyled {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+li {
+  margin: 20px 0;
+}
+
+.centered {
+  width: 300px;
+  margin: auto;
+}
+
+.title {
+  text-align: center;
+  color: rgb(69, 113, 236);
+}
+
+
+      
+}
