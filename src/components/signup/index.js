@@ -16,6 +16,7 @@ import './signup.scss'
 
 import { SettingsContext } from '../../context/auth';
 import  { useContext } from 'react';
+import {useEffect} from 'react'
 // import { useState } from 'react';
 // import { useEffect } from 'react';
 
@@ -66,8 +67,10 @@ export default function SignUp() {
     context.signup(signUpInfo)    
 }
 
-  const classes = useStyles();
 
+
+  const classes = useStyles();
+  if (!context.loggedIn){
   return (
     <Container className = 'what' component="main" maxWidth="xs">
       <CssBaseline />
@@ -129,4 +132,8 @@ export default function SignUp() {
       </Box>
     </Container>
   );
+}
+else{
+  window.location.href = `/`;
+}
 }

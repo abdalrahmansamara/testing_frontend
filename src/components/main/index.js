@@ -13,6 +13,7 @@ import Shop from '../Shop'
 import Portfolio from '../Portfolio'
 import Blog from '../Blog'
 import BbPress from '../bbPress'
+import SingleRender from '../singleRender'
 
 
 import './main.scss'
@@ -23,7 +24,7 @@ function Main() {
             <Switch>
                 <Route exact path='/' component = {Home}/>
                 <Route path='/events' component = {Events}/>
-                <Route path='/courses' component = {Courses}/>
+                <Route exact path='/courses' component = {Courses}/>
                 <Route path='/pages' component = {Pages}/>
                 <Route path='/signin' component = {SignIn}/>
                 <Route path='/signup' component = {SignUp}/>
@@ -32,10 +33,7 @@ function Main() {
                 <Route path='/Portfolio' component = {Portfolio}/>
                 <Route path='/Blog' component = {Blog}/>
                 <Route path='/bbpress' component = {BbPress}/>
-
-
-
-                
+                <Route path='/courses/:id' component = {SingleRender}/>
 
                 <Route>
                     <div>

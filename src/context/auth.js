@@ -12,6 +12,7 @@ const API = 'https://talkversity-apitesting.herokuapp.com/api/token/'; //process
 export const SettingsContext = React.createContext();
 function SettingsProvider(props) {
   const [loggedIn, setloggedIn] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [token, setToken] = useState('');
   const [user, setUser] = useState({});
 
@@ -29,7 +30,6 @@ function SettingsProvider(props) {
         `https://talkversity-apitesting.herokuapp.com/accounts/${id}`
 
       );
-
       setLoginState(true, token, userData.data);
     } catch (error) {
       setLoginState(false, null, {});
@@ -37,10 +37,14 @@ function SettingsProvider(props) {
     }
   };
   const setLoginState = (loggedIn, token, user) => {
+    // if(token == null){
+    //   cookie.remove()
+    // }
     cookie.save('auth', token);
     setToken(token);
     setUser(user);
     setloggedIn(loggedIn);
+    setLoading(false);
   };
   const login = async (username, password) => {
 
@@ -52,7 +56,7 @@ function SettingsProvider(props) {
 
       const response = await axios.post(API, data);
 
-      validateToken(response.data.access);
+      await validateToken(response.data.access);
       toast.success(`Login Success`)
       setTimeout(() => {
 
@@ -95,6 +99,8 @@ function SettingsProvider(props) {
     login,
     logout,
     signup,
+    loading,
+    setLoading
   };
   return (
     <SettingsContext.Provider value={state}>

@@ -1,9 +1,23 @@
 import React from 'react'
+import AllCourses from '../allCourses'
+import { useContext } from 'react';
+import { SettingsContext } from '../../context/auth';
+
+
 
 function Courses() {
-    return (
+    const context = useContext(SettingsContext);
+
+    
+    if(context.loggedIn)return (
         <div>
-            this is the courses page
+            <AllCourses />
+        </div>
+    )
+    
+    return(
+        <div>
+            Please Login to see what's inside this page
         </div>
     )
 }

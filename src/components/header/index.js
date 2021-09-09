@@ -4,6 +4,8 @@ import logo from './logo.png'
 import "./header.scss";
 import { SettingsContext } from '../../context/auth';
 import { useContext } from 'react';
+import { NavLink } from 'react-router-dom';
+// import {useEffect} from 'react'
 
 function Header() {
 
@@ -12,13 +14,6 @@ function Header() {
   function logouthandler(e){
     e.preventDefault();
     context.logout()
-    
-  //   setTimeout(() => {
-
-  //     window.location.href = `/`;
-
-  // }, 500);
-    
   }
 
   if (context.loggedIn){
@@ -28,22 +23,22 @@ function Header() {
           <img src={logo} alt="" />
         </a>
         <div className='right'>
-            <Link exact to='/' className='link'>
+            <NavLink exact to='/' className='link'>
                 <h2>Home</h2>
                 <p>All Variations</p>
-            </Link>
-            <Link to='/events' className='link'>
+            </NavLink>
+            <NavLink to='/events' className='link'>
                 <h2>Events</h2>
                 <p>Our Activities</p>
-            </Link>
-            <Link to='/courses' className='link'>
+            </NavLink>
+            <NavLink to='/courses' className='link'>
                 <h2>Courses</h2>
                 <p>Research & Study</p>
-            </Link>
-            <Link to='/pages' className='link'>
+            </NavLink>
+            <NavLink to='/pages' className='link'>
                 <h2>Pages</h2>
                 <p>Designed Pages</p>
-            </Link>
+            </NavLink>
             <div className='link' onClick={logouthandler} style={{cursor:"pointer"}}>
             <h2>Logout</h2>
                 <p>Bye</p>
@@ -80,30 +75,30 @@ function Header() {
         <img src={logo} alt="" />
       </a>
       <div className='right'>
-          <Link exact to='/' className='link'>
+          <NavLink exact to='/' className='link'>
               <h2>Home</h2>
               <p>All Variations</p>
-          </Link>
-          <Link to='/events' className='link'>
+          </NavLink>
+          <NavLink to='/events' className='link'>
               <h2>Events</h2>
               <p>Our Activities</p>
-          </Link>
-          <Link to='/courses' className='link'>
+          </NavLink>
+          <NavLink to='/courses' className='link'>
               <h2>Courses</h2>
               <p>Research & Study</p>
-          </Link>
-          <Link to='/pages' className='link'>
+          </NavLink>
+          <NavLink to='/pages' className='link'>
               <h2>Pages</h2>
               <p>Designed Pages</p>
-          </Link>
-          <Link to='/signin' className='link'>
+          </NavLink>
+          <NavLink to='/signin' className='link'>
               <h2>Login</h2>
               <p>welcome back</p>
-          </Link>
-          <Link to='/signup' className='link'>
+          </NavLink>
+          <NavLink to='/signup' className='link'>
               <h2>Sign Up</h2>
               <p>new Experience</p>
-          </Link>
+          </NavLink>
       </div>
       <div className="right_ham">
         <div className="nav">
