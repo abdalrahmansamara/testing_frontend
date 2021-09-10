@@ -33,7 +33,7 @@ function SettingsProvider(props) {
       setLoginState(true, token, userData.data);
     } catch (error) {
       setLoginState(false, null, {});
-      console.log(`Token Validation Error ${error.message}`);
+      // console.log(`Token Validation Error ${error.message}`);
     }
   };
   const setLoginState = (loggedIn, token, user) => {
@@ -66,8 +66,7 @@ function SettingsProvider(props) {
 
     } catch (error) {
       toast.error(`Either username or password are wrong`)
-      console.error('Signin Error', error.message);
-
+      // console.error('Signin Error', error.message);
     }
   };
   const logout = () => {
@@ -75,16 +74,14 @@ function SettingsProvider(props) {
   };
   const signup = async userInfo => {
     try {
-
-      const b = await axios.post('https://talkversity-apitesting.herokuapp.com/accounts/signup', userInfo)
-
+      const b = await axios.post('https://talkversity-apitesting.herokuapp.com/accounts/signup/', userInfo)
       toast.success(`Singup success`)
       window.location.href = `/signin`;
      
     } catch(error){
 
       toast.error(`Username already exists`)
-      console.error('Signup Error', error.message);
+      // console.error('Signup Error', error.message);
 
     }
     

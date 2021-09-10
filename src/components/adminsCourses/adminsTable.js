@@ -10,7 +10,7 @@ import toast from 'react-hot-toast';
 
 
 function AdminsTable(props) {
-  console.log(props)
+  // console.log(props)
 
 
 

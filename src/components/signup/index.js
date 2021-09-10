@@ -63,7 +63,7 @@ export default function SignUp() {
         username: e.target.username.value,
         password: e.target.password.value,
     }
-    console.log(signUpInfo)
+    // console.log(signUpInfo)
     context.signup(signUpInfo)    
 }
 

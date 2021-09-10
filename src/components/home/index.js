@@ -1,7 +1,7 @@
 import React from 'react'
 
-function Home(props) {
-    console.log(props)
+function Home() {
+    
     return (
         <div className='temp'>
             This is the Home Page, Go to Courses Page

@@ -3,7 +3,7 @@ import UsersTable from './UsersTable'
 import './UsersTable.scss'
 function Regular(props) {
 
-    console.log(props.courses[0])
+    // console.log(props.courses[0])
 
 
     return (

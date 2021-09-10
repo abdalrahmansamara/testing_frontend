@@ -59,7 +59,7 @@ export default function SignIn() {
         username: e.target.username.value,
         password: e.target.password.value,
     }   
-    console.log(signInInfo)
+    // console.log(signInInfo)
     context.login(signInInfo.username,signInInfo.password)
 }
   const classes = useStyles();
