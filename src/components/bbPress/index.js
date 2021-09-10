@@ -2,8 +2,8 @@ import React from 'react'
 
 function BbPress() {
     return (
-        <div>
-            this is the bbpress page
+        <div className='temp'>
+            This is the bbpress Page
         </div>
     )
 }

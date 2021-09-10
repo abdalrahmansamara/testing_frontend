@@ -8,11 +8,11 @@ import { withRouter } from 'react-router';
 function UsersTable(props) {
 
 
-  const sendToDetailsPage = (e) => {
-    e.preventDefault()
-    let id = e.target.id.value
-    window.location.href = `/courses/${id}`;
-  }
+  // const sendToDetailsPage = (e) => {
+  //   e.preventDefault()
+  //   let id = e.target.id.value
+  //   window.location.href = `/courses/${id}`;
+  // }
 
 
   return (

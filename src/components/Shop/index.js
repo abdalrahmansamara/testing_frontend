@@ -2,8 +2,8 @@ import React from 'react'
 
 function Shop() {
     return (
-        <div>
-            this is the shop page
+        <div className='temp'>
+            This is the Shop Page
         </div>
     )
 }

@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
 .formcss {
-  width:100vh;
+  // width:100vh;
+  max-width: 100%;
+  height: auto;
   display: block;
   margin: auto;
   
@@ -10,6 +12,15 @@
 }
 .back{
   background-color: rgb(253, 251, 247);
+
+}
+.labelo{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #8597a3;
+  line-height: 1.5;
+  font-weight: 500;
+  text-align: left;
+
 
 }
 
@@ -49,9 +60,9 @@ input {
   border-radius: 8px;
   overflow: hidden;
   padding-bottom: 65%;
-  background-image: url("https://wallpaperaccess.com/full/1510143.jpg");
+  background-image: url("https://breastfeedinglaw.com/wp-content/uploads/2020/06/book.jpeg");
   background-repeat: no-repeat;
-  background-size: 150%;
+  background-size: 100%;
   background-position: 0 5%;
   position: relative;
 }
@@ -173,11 +184,13 @@ input {
 .styled-checkbox {
   position: absolute; // take it out of document flow
   opacity: 0; // hide it
+  
 
   & + label {
     position: relative;
     cursor: pointer;
     padding: 0;
+    
   }
 
   // Box.
@@ -189,11 +202,15 @@ input {
     width: 20px;
     height: 20px;
     background: white;
+    border:1px solid #f35429;
   }
 
   // Box hover
   &:hover + label:before {
     background: #f35429;
+  }
+  label{
+    border: 1px solid green;
   }
   
   // Box focus
@@ -272,3 +289,8 @@ li {
 
       
 }
+// @media only screen and (max-width: 860px) {
+//   .formcss{
+//       overflow-x: scroll;
+//   }
+// }

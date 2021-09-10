@@ -2,8 +2,8 @@ import React from 'react'
 
 function BuddyPress() {
     return (
-        <div>
-            this is the buddypress page
+        <div className='temp'>
+            This is the buddypress Page
         </div>
     )
 }

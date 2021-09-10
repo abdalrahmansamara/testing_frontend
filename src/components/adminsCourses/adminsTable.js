@@ -31,14 +31,14 @@ function AdminsTable(props) {
     }
   }
 
-  const sendToDetailsPage = (e) => {
-    e.preventDefault()
-    let id = e.target.id.value
-    window.location.href = `/courses/${id}`;
-    // props.history = []
-    // props.history.push(`/courses/${id}`)
+  // const sendToDetailsPage = (e) => {
+  //   e.preventDefault()
+  //   let id = e.target.id.value
+  //   window.location.href = `/courses/${id}`;
+  //   // props.history = []
+  //   // props.history.push(`/courses/${id}`)
     
-  }
+  // }
 
 
   return (

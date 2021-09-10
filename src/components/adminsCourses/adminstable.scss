@@ -12,6 +12,9 @@
         cursor: pointer;
         outline: inherit;
     }
+    td:first-child{
+        color: Blue;
+    }
 
     .styling{
         color: rgb(255, 255, 255);

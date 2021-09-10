@@ -2,8 +2,8 @@ import React from 'react'
 
 function Portfolio() {
     return (
-        <div>
-            this is the Portfolio page
+        <div className='temp'>
+            This is the Portfolio Page
         </div>
     )
 }

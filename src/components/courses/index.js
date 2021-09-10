@@ -16,7 +16,7 @@ function Courses() {
     )
     
     return(
-        <div>
+        <div className='temp'>
             Please Login to see what's inside this page
         </div>
     )

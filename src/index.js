@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from 'react-router-dom'
-import toast, { Toaster } from 'react-hot-toast';
+import { Toaster } from 'react-hot-toast';
 import SettingsProvider from './context/auth'
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
