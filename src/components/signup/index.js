@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SignUp() {
+export default function SignUp(props) {
 
   const context = useContext(SettingsContext);
   const signUpHandler = (e) =>{
@@ -64,7 +64,8 @@ export default function SignUp() {
         password: e.target.password.value,
     }
     // console.log(signUpInfo)
-    context.signup(signUpInfo)    
+    context.signup(signUpInfo) 
+    props.history.push(`/signin`);   
 }
 
 

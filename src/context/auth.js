@@ -76,7 +76,6 @@ function SettingsProvider(props) {
     try {
       const b = await axios.post('https://talkversity-apitesting.herokuapp.com/accounts/signup/', userInfo)
       toast.success(`Singup success`)
-      window.location.href = `/signin`;
      
     } catch(error){
 
